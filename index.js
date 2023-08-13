@@ -18,12 +18,12 @@ const questions = [
 },
 {
   type: 'input',
-  message: 'Enter the name of your project:',
+  message: 'Enter the title of your project:',
   name: 'title',
 },
 {
   type: 'input',
-  message: 'Enter a short description of your project:',
+  message: "Enter your project's description:",
   name: 'desc',
 },
 {
@@ -38,7 +38,7 @@ const questions = [
   },
   {
     type: 'input',
-    message: 'Enter what the user needs to know about contributing to this repo',
+    message: 'Enter what the user needs to know about contributing to this repo:',
     name: 'contribution',
   },
   {
@@ -48,14 +48,14 @@ const questions = [
   },
   {
     type: 'list',
-    message: 'Select which license this project should have:',
-    name: 'licenses',
+    message: 'Select which license this project should use:',
+    name: 'license',
     choices: [
-        "MIT License",
-        "Apache License 2.0",
-        "GPL-3.0",
-        "BSD 2-Clause",
-        "No License"
+        "MIT",
+        "APACHE",
+        "GPL",
+        "BSD",
+        "None"
     ]
   }
 
@@ -74,8 +74,8 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.createPromptModule(questions).then(function (data) {
-    var fileName = 'README.md';
+  inquirer.prompt(questions).then(function (data) {
+    var fileName = './assets/generated_readme/README.md';
     writeToFile(fileName, data)
   })
 }
