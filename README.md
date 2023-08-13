@@ -29,6 +29,10 @@ To install the necessary dependencies, run the following command: npm i inquirer
 ## Usage
 Respond to the prompted questions in order to generate a README file for your project.
 
+Below is an informative video of how to use this code:
+
+https://drive.google.com/file/d/19SBbAtGzJVbhpYuiZ-5K6600Wv1uQiN_/view?usp=sharing
+
 ## License 
 This project is licensed under the MIT license.
 
